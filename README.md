@@ -40,5 +40,40 @@ This repository provides a template for a Node.js application with user authenti
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/your-username/node-auth-template.git
+   git clone https://github.com/kirusanth-08/node-auth-template.git
    cd node-auth-template
+
+2. Install dependencies:
+    ```sh
+    npm install
+
+3. Create a .env file in the root directory and add the following environment variables:
+    ```sh
+    PORT=3000
+    MONGODB_URI=your_mongodb_uri
+    JWT_SECRET=your_jwt_secret
+
+## API Endpoints
+
+### User Registration
+
+- **URL**: `/api/users/v1/register`
+- **Method**: `POST`
+- **Body**:
+  ```json
+  {
+    "email": "user@example.com",
+    "phoneNumber": "1234567890",
+    "password": "yourpassword"
+  }
+  
+### User Login
+
+- **URL**: `/api/users/v1/login`
+- **Method**: `POST`
+- **Body**:
+  ```json
+  {
+    "email": "user@example.com",
+    "password": "yourpassword"
+  }
